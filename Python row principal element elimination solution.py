@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def complete_pivoting_elimination(A, b):
+def row_principal_element_elimination(A, b):
     rows = cols = len(A)
     augm_mat = np.column_stack((A, b.T)) if b is not None else A.copy()
 
@@ -53,4 +53,4 @@ def complete_pivoting_elimination(A, b):
 # 测试
 A = np.array([[2, -1, 3], [4, 2, 5], [1, 2, 0]], dtype=float)
 b = np.array([[1, 4, 7]], dtype=float)
-complete_pivoting_elimination(A, b)
+row_principal_element_elimination(A, b)
